@@ -17,28 +17,28 @@
                         </ul>
                     @endif
                     <div class="form-group row">
-                        <label class="col-md-2" for="title">氏名</label>
+                        <label class="col-md-2" for="name">氏名</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="title" value="{{ old('title') }}">
+                            <input type="text" class="form-control" name="name" value="{{ old('title') }}">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-md-2" for="title">性別</label>
+                        <label class="col-md-2" for="gender">性別</label>
                         <div class="col-md-10">
                             <input type="radio" name="gender" value="男性">男性<br>
                             <input type="radio" name="gender" value="女性">女性
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-md-2" for="body">趣味</label>
+                        <label class="col-md-2" for="hobby">趣味</label>
                         <div class="col-md-10">
-                            <textarea class="form-control" name="body" roes="10">{{ old('body') }}</textarea>
+                            <textarea class="form-control" name="hobby" roes="10"></textarea>
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-md-2" for="body">自己紹介欄</label>
+                        <label class="col-md-2" for="introduction">自己紹介欄</label>
                         <div class="col-md-10">
-                            <textarea class="form-control" name="body" roes="20">{{ old('body') }}</textarea>
+                            <textarea class="form-control" name="introduction" roes="20"></textarea>
                         </div>
                     </div>
                     {{ csrf_field() }}
@@ -48,3 +48,6 @@
         </div>
     </div>
     @endsection
+
+    
+    
