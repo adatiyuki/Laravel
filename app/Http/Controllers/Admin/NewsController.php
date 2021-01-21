@@ -85,7 +85,7 @@ public function edit(Request $request)
         // 該当するデータを上書きして保存する
         $news->fill($news_form)->save();
 
-        return redirect('admin/news');
+        return redirect('admin/news/');
     }
         //以下を追記
         public function delete(Request $request)

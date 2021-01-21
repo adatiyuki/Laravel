@@ -54,11 +54,20 @@ class ProfileController extends Controller
 
     public function update(Request $request)
     {
-        $this->validate($request,Profile::$rules);
+        $this->validate($request, Profile::$rules);
         $profile = Profile::find($request->id);
         $profile_form = $request->all();
         unset($profile_form['_token']);
         $profile->fill($profile_form)->save();
+        return redirect('admin/profile/');
+    }
+    //以下を追加
+    public function delete(Request $request)
+    {
+        //該当するNews Modelを所得
+        $profile = Profile::find($request->id);
+        //削除する
+        $profile->delete();
         return redirect('admin/profile/');
     }
 }
